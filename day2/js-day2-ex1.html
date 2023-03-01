@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <title>Day 2 Ex.1</title>
+</head>
+<body>
+    <div class="container">
+        <div id="box" style="width: 500px; height: 200px;">&nbsp;</div>
+        <div id="box" style="width: 500px; height: 200px;">&nbsp;</div>
+        <div id="box" style="width: 500px; height: 200px;">&nbsp;</div>
+    </div>
+    <div class="container">
+    <button id="btn">Change Colour</button>
+    <a  href="/index.html" style="color: whitesmoke">
+        <button>BACK</button>
+    </a>
+</div>
+<script>
+    const divs = document.querySelectorAll("div#box")
+          
+    for(let i = 0; i<3; i++){
+        console.log(divs[i])
+        divs[i].style.backgroundColor = "whitesmoke"
+    }
+
+    
+    function randomColor(){
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+        const color = `rgb(${r}, ${g}, ${b})`;
+        return color;
+    }
+
+    document.getElementById("btn").onclick = ()=> {
+        divs[0].style.backgroundColor = randomColor()
+        divs[1].style.backgroundColor = randomColor()
+        divs[2].style.backgroundColor = randomColor()
+        }
+
+</script>
+<a href="https://github.com/Linding3r/Week5" target="_blank" class="github-logo">
+    <img class="github-button" src="https://img.shields.io/badge/GitHub-%2312100E.svg?&style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+</a>
+</body>
+</html>

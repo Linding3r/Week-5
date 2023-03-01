@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+    <h2>Exercise 3</h2>
+    <div class="container">
+    <ul id="my-ul"></ul>
+    <form>
+        <input id="input" class="input-field" style="margin-top: 50px;">
+        <button id="btn-add">Add Name</button>
+        <div style="margin-top: 10px;">
+        <button id="btn-rm-first">Remove First</button>
+        <button id="btn-rm-last"">Remove Last</button>
+    </form>
+</div>
+    <a  href="/index.html" style="color: whitesmoke;">
+        <button style="margin-top: 100px;">BACK</button>
+    </a>
+
+</div>
+    <script>
+        const names = ["Thomas", "Frederik", "Jonathan", "Rami"]
+
+        function createNameList() {
+            document.getElementById("my-ul").innerHTML = names.map(name => `<li>${encode(name)}</li>`).join("")
+        }
+        createNameList()
+
+        document.getElementById("btn-add").onclick = (evt) => {
+            evt.preventDefault()
+            const newName = document.getElementById("input").value
+            names.push(newName)
+            createNameList()
+        }
+        document.getElementById("btn-rm-first").onclick = (evt) => {
+            evt.preventDefault()
+            names.shift()
+            createNameList()
+        }
+        document.getElementById("btn-rm-last").onclick = (evt) => {
+            evt.preventDefault()
+            names.pop()
+            createNameList()
+        }
+
+        function encode(str) {
+        str = str.replace(/&/g, "&amp;");
+        str = str.replace(/>/g, "&gt;");
+        str = str.replace(/</g, "&lt;");
+        str = str.replace(/"/g, "&quot;");
+        str = str.replace(/'/g, "&#039;");
+        return str;
+    }
+
+    </script>
+    <a href="https://github.com/Linding3r/Week5" target="_blank" class="github-logo">
+        <img class="github-button" src="https://img.shields.io/badge/GitHub-%2312100E.svg?&style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+    </a>
+</body>
+</html>

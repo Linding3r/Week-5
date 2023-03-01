@@ -1,0 +1,43 @@
+table {
+    border-collapse: collapse;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  tr:hover {
+    background-color: #394a58;
+  }
+  
+  td:last-child, th:last-child {
+    text-align: right;
+  }
+  
+  @media screen and (max-width: 767px) {
+    th, td {
+      display: block;
+      width: 80%;
+    }
+    
+    th {
+      text-align: center;
+    }
+    
+    td:last-child, th:last-child {
+      text-align: left;
+    }
+  }
+  
