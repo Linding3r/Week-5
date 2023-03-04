@@ -64,15 +64,13 @@
 
         document.getElementById("boxes").onclick = (evt) => {
             const id = evt.target.id;
-            console.log("Hi from div number: " + id)
-            document.getElementById("box-id-txt").innerText = id;
-
             const boxes = document.getElementsByClassName("my-div");
                 for (let i = 0; i < boxes.length; i++) {
                     boxes[i].style.backgroundColor = "whitesmoke";
                 }
             if(id !== "boxes"){
                 document.getElementById(id).style.backgroundColor = "#3e8e41";
+                document.getElementById("box-id-txt").innerText = "Hi from div number: " + id;
             }
         }
 
