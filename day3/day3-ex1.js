@@ -8,6 +8,7 @@ function fetchAll(evt){
     fetch(URL)
     .then(res => res.json())
     .then(data => {
+      data.map(data => "")
         
     })
     
