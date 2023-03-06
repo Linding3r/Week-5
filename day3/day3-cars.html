@@ -109,11 +109,15 @@
         <div class="item">
             <h3>Edit a Car</h3>
             <label for="text-for-id2">Id</label>&nbsp;<input id="text-for-id2"/>
-            <button>Find car to edit</button>
-            <!---<p>Show what you find here, and let users edit fields</p>-->
-            <p>......</p>
-            <button>Submit edited car</button>
-            <!--<p>Use one of the two GET pages to verify that "something" was added</p>-->
+            <button id="btn-find-car">Find car to edit</button>
+            <div><label for="input-brand2">Brand</label>&nbsp;<input id="input-brand2"/></div>
+            <div><label for="input-model2">Model</label>&nbsp;<input id="input-model2"/></div>
+            <div><label for="input-price2">Price Per Day</label>&nbsp;<input id="input-price2"/></div>
+            <div><label for="input-discount2">Max Discount</label>&nbsp;<input id="input-discount2"/></div>
+            <p id="c-error2" style="color:red"></p>
+            <button id="btn-edit-car">Submit edited car</button>
+            <p id="edited-car"></p>
+            
         </div>
     </div>
 </div>
